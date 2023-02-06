@@ -22,5 +22,5 @@ class Queue(AbstractQueue):
 
         if not index >= 0 and index <= size:
             raise IndexError
-        
+
         return self.data[index]
