@@ -20,7 +20,7 @@ class Queue(AbstractQueue):
     def search(self, index):
         size = len(self.data)
 
-        if not index >= 0 and index <= size:
+        if index < 0 or index >= size:
             raise IndexError
 
         return self.data[index]
