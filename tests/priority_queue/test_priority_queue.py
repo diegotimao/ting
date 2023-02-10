@@ -118,16 +118,11 @@ def test_basic_priority_queueing():
 
     receives = priority_queue.search(1)
 
-    print(receives)
     assert receives == mock_search
-
-    # receives_search = priority_queue.search(-1)
 
     priority_queue.dequeue()
 
     assert priority_queue.__len__() == 3
-
-    # print(len(data))
 
     with pytest.raises(IndexError):
         priority_queue.search(-1)
